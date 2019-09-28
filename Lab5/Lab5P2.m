@@ -1,0 +1,20 @@
+clear;
+n0 = 1024;
+k = 0:n0-1;
+w = hanning(1024).';
+r = rectwin(1024).';
+freq = (-n0/2 + 1 : n0/2)*(1/n0);
+A= 1;
+B=0.1;
+C= 10^-5; 
+fo = 0.25;
+f1 = 0.28;
+f2 = -0.2513;
+x = A*exp(1i*2*pi*fo*k) + B*exp(1i*2*pi*f1*k) + C*exp(1i*2*pi*f2*k);
+xw = x.*w;
+xf = abs(fft(xw,n0));
+xf = xf/max(xf);
+xf = 20*log10(xf);
+xf = fftshift(xf);
+
+plot(freq,r);
