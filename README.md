@@ -1,1 +1,2 @@
-# ECE3780
+# Signal Processing I (ECE3780)
+Learned the basics of representing signals mathematically/graphically, as well as time-domain & spectral-domain analysis of both continuous and discrete systems. Covered topics like the Fourier Series, the continuous/discrete Fourier Transform, the Laplace Transform, and convolution.
